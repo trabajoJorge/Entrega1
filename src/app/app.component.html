@@ -1,0 +1,10 @@
+<ul>
+  <li *ngFor="let alumno of alumnos">
+    <div *ngIf="isVip(alumno); else notVIP" [ngClass]="isVip(alumno) ? 'VIP' : 'success'">
+      VIP: {{alumno}}
+    </div>
+    <ng-template #notVIP>
+      {{alumno}}
+    </ng-template>
+  </li>
+</ul>
